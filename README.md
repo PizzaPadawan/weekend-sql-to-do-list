@@ -10,6 +10,12 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 
 ## TODO:
 - [] set up SQL database
+    - db name 'weekend-to-do-app'
+    - table name 'todo'
+        - id SERIAL PRIMARY KEY
+        - taskname VARCHAR(250) NOT NULL
+        - completed BOOLEAN DEFAULT 'FALSE'
+        - time DATE
     - [] include .sql file for reference
 
 - [] set up server-side code:

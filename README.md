@@ -9,16 +9,16 @@ Your project description goes here. What problem did you solve? How did you solv
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
 
 ## TODO:
-- [] set up SQL database
+- [x] set up SQL database
     - db name 'weekend-to-do-app'
     - table name 'todo'
         - id SERIAL PRIMARY KEY
         - taskname VARCHAR(250) NOT NULL
         - completed BOOLEAN DEFAULT 'FALSE'
         - time DATE
-    - [] include .sql file for reference
+    - [x] include .sql file for reference
 
-- [] set up server-side code:
+- [x] set up server-side code:
     /server
         /public
         - [] html
@@ -27,24 +27,25 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
             - [] client.js
             - [] jquery.js
         /modules
-        - [] pool.js
+        - [x] pool.js
         /routes
         - [] todo.router.js
     - [] server.js
     .gitignore
-- [] npm init --yes
-- [] npm i pg
-- [] npm i express
+- [x] npm init --yes
+- [x] npm i pg
+- [x] npm i express
 
 - [] front end that allows a user to create a task
     - [] client.js ajax POST request
     - [] client.js append function
 
 - [] each task should be stored inside of SQL database
-    - [] todo.router.js POST request
+    - [x] todo.router.js POST request
 
 - [] front end should refresh to show all tasks
     - [] client.js ajax GET request
+    - [x] todo.router.js GET request
 
 - [] each task should have an option to 'complete' or 'delete'
     - [] client.js append function
@@ -58,10 +59,10 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
     - [] client.js addClass / removeClass
 
 - [] 'completed' status should be stored in database
-    - [] todo.router.js PUT request
+    - [x] todo.router.js PUT request
 
 - [] deleting a task should remove it from front end AND database
-    - [] todo.router.js DELETE request
+    - [x] todo.router.js DELETE request
 
 ### Stylin'
 

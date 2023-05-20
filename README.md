@@ -21,62 +21,63 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 - [x] set up server-side code:
     /server
         /public
-        - [] html
-        - [] css
+        - [x] html
+        - [x] css
             /scripts
-            - [] client.js
-            - [] jquery.js
+            - [x] client.js
+            - [x] jquery.js
         /modules
         - [x] pool.js
         /routes
-        - [] todo.router.js
-    - [] server.js
+        - [x] todo.router.js
+    - [x] server.js
     .gitignore
 - [x] npm init --yes
 - [x] npm i pg
 - [x] npm i express
 
-- [] front end that allows a user to create a task
-    - [] client.js ajax POST request
-    - [] client.js append function
+- [x] front end that allows a user to create a task
+    - [x] html task input / button
+    - [x] client.js ajax POST request
+    - [x] client.js append function
 
-- [] each task should be stored inside of SQL database
+- [x] each task should be stored inside of SQL database
     - [x] todo.router.js POST request
 
-- [] front end should refresh to show all tasks
-    - [] client.js ajax GET request
+- [x] front end should refresh to show all tasks
+    - [x] html table
+    - [x] client.js ajax GET request
     - [x] todo.router.js GET request
 
-- [] each task should have an option to 'complete' or 'delete'
-    - [] client.js append function
-    - [] client.js ajax PUT request
-    - [] client.js ajax DELETE request
-    - [] onReady click handlers
+- [x] each task should have an option to 'complete' or 'delete'
+    - [x] client.js append function
+    - [x] client.js ajax PUT request
+    - [x] client.js ajax DELETE request
+    - [x] onReady click handlers
 
-- [] change visual representation when task changed to complete
-    - [] style.css .notcomplete class
-    - [] style.css .complete class
-    - [] client.js addClass / removeClass
+- [x] change visual representation when task changed to complete
+    - [x] style.css .complete class
+    - [x] client.js conditional append
 
-- [] 'completed' status should be stored in database
+- [x] 'completed' status should be stored in database
     - [x] todo.router.js PUT request
 
-- [] deleting a task should remove it from front end AND database
+- [x] deleting a task should remove it from front end AND database
     - [x] todo.router.js DELETE request
 
 ### Stylin'
 
-- [] change background color of page
-- [] font family and size
-- [] text color & background color of tasks based on completed status
+- [x] change background color of page
+- [x] font family and size
+- [x] text color & background color of tasks based on completed status
 
 ### STRETCH GOALS
 
 USE BRANCHES
 
 - [] feature-styling-bootstrap
-    - [] add bootstrap CDN to the front end
-        - [] source CDN links into index.html
+    - [x] add bootstrap CDN to the front end
+        - [x] source CDN links into index.html
         - [] research bootstrap classes and edit html
     - [] buttons (create green, delete red)
     - [] inputs

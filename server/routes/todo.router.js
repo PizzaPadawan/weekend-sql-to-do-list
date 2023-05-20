@@ -31,11 +31,11 @@ router.post('/', (req, res) => {
     });
 });
 
-router.put('/:id', (req, res) => {
-    console.log('pootis', req.params.id, req.body.completed);
-    let query = `UPDATE "todo" SET "completed"=$1 WHERE "id"=$2;`
+router.put('/:id/complete', (req, res) => {
+    console.log('pootis', req.params.id);
+    let query = `UPDATE "todo" SET "completed"=TRUE WHERE "id"=$1;`
 
-    pool.query(query, [req.body.completed, req.params.id])
+    pool.query(query, [req.params.id])
     .then(result => {
         res.sendStatus(201);
     }).catch(error => {

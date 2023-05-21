@@ -1,5 +1,6 @@
 const pool = require('../modules/pool');
 const express = require('express');
+const moment = require('moment');
 const router = express.Router();
 
 router.get('/', (req, res) =>{
@@ -37,9 +38,15 @@ router.post('/', (req, res) => {
 
 router.put('/:id/complete', (req, res) => {
     console.log('pootis', req.params.id);
-    let query = `UPDATE "todo" SET "completed"=TRUE WHERE "id"=$1;`
+    let query = `UPDATE "todo" SET "completed"=TRUE, "time"=$1 WHERE "id"=$2;`
 
-    pool.query(query, [req.params.id])
+    let today = new Date();
+    console.log(today);
+    let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    console.log(time);
+    let fullDate = moment(today, time).format('MM D YYYY, hh:mm:ss A');
+    console.log(fullDate);
+    pool.query(query, [fullDate, req.params.id])
     .then(result => {
         res.sendStatus(201);
     }).catch(error => {

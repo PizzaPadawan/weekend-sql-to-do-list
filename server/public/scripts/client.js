@@ -21,13 +21,13 @@ function getList(){
 function appendList(response){
     $('#showList').empty();
     for(item of response){
-        console.log (item.completed);
     if(item.completed === true){
         $('#showList').append(`
         <tr class="table-success">
             <td>${item.taskname}</td>
             <td><button data-id="${item.id}" class="completedButton btn btn-outline-secondary">Complete</button></td>
             <td><button data-id="${item.id}" class="deleteButton btn btn-danger">Delete</button></td>
+            <td>${moment(item.time).format('MMMM Do YYYY, h:mm:ss a')}</td>
         </tr>
         `);} else {
         $('#showList').append(`
@@ -35,6 +35,7 @@ function appendList(response){
             <td>${item.taskname}</td>
             <td><button data-id="${item.id}" class="completedButton btn btn-success">Complete</button></td>
             <td><button data-id="${item.id}" class="deleteButton btn btn-danger">Delete</button></td>
+            <td></td>
         </tr>
         `);}
     }
@@ -50,6 +51,7 @@ function postTask(){
         }
     }).then(response => {
         console.log('POSTY');
+        getList();
     }).catch(error => {
         alert('error posting your task', error);
     });

@@ -9,7 +9,11 @@ This project also has several feature branches, which have extra style changes a
 ## Screenshots
 
 ![Master branch screenshot](/images/master.png)
-
+![feature-styling-bootstrap screenshot](/images/feature-styling-bootstrap.png)
+![feature-confirm-delete pop-up (are you sure?) screenshot](/images/feature-confirm-delete1.png)
+![feature-confirm-delete pop up (deletion confirmed) screenshot](/images/feature-confirm-delete2.png)
+![feature-ordering-task-query screenshot](/images/feature-ordering-task-query.png)
+![feature-time-completed screenshot](/images/feature-time-completed.png)
 
 ## Prerequisites
 

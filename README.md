@@ -87,8 +87,8 @@ USE BRANCHES
 - [x] feature-confirm-delete
     - [x] Sweetalert (CDN) "are you sure? y/n" alert on delete
 
-- [] feature-ordering-task-query
-    - [] figure out how to use req.query to have the GET request reverse the order of returned todos
+- [x] feature-ordering-task-query
+    - [x] figure out how to use req.query to have the GET request reverse the order of returned todos
 
 - [] feature-time-completed
     - [] add the ability to record the time when a task was completed. Show the complted date on the frontend in a purdy format (moment.js)

@@ -3,8 +3,12 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/', (req, res) =>{
-    console.log('get TODO list')
+    const sort = req.query.sort
+    console.log('get TODO list', sort)
     let query = 'SELECT * FROM "todo";'
+    if (sort === 'desc'){
+        query = 'SELECT * FROM "todo" ORDER BY "id" DESC;'
+    }
 
     pool.query(query)
     .then(result => {

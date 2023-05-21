@@ -8,7 +8,7 @@ $(()=>{
 function getList(){
     $.ajax({
         method: 'GET',
-        url: '/todo'
+        url: '/todo?sort=desc'
     }).then(response => {
         console.log("frontend GET success", response);
         appendList(response);

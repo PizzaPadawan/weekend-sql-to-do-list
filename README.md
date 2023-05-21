@@ -75,17 +75,17 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
 
 USE BRANCHES
 
-- [] feature-styling-bootstrap
+- [x] feature-styling-bootstrap
     - [x] add bootstrap CDN to the front end
         - [x] source CDN links into index.html
-        - [] research bootstrap classes and edit html
-    - [] buttons (create green, delete red)
-    - [] inputs
-    - [] responsive
-        - [] reference [layout section](https://getbootstrap.com/docs/4.1/layout/overview/)
+        - [x] research bootstrap classes and edit html
+    - [x] buttons (create green, delete red)
+    - [x] inputs
+    - [x] responsive
+        - [x] reference [layout section](https://getbootstrap.com/docs/4.1/layout/overview/)
 
-- [] feature-confirm-delete
-    - [] Sweetalert (CDN) "are you sure? y/n" alert on delete
+- [x] feature-confirm-delete
+    - [x] Sweetalert (CDN) "are you sure? y/n" alert on delete
 
 - [] feature-ordering-task-query
     - [] figure out how to use req.query to have the GET request reverse the order of returned todos

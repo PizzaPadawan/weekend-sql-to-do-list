@@ -74,13 +74,31 @@ function pootis(event){
 function deleteTask(event){
     let taskId = $(event.target).data('id');
     console.log(taskId);
-    $.ajax({
-        method:'DELETE',
-        url: `/todo/${taskId}`
-    }).then(response => {
-        console.log(response);
-        getList();
-    }).catch(error => {
-        alert('error deleting task', error);
-    });
+    Swal.fire({
+        title: 'Are you sure you want to delete this?',
+        text: "This list item will be gone FOREVER (unless you submit it again, I guess)",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#198754',
+        cancelButtonColor: '#dc3545',
+        confirmButtonText: 'Yes pls'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            'Deleted!',
+            'This task has been removed from your list.',
+            'success'
+          )
+        $.ajax({
+            method:'DELETE',
+            url: `/todo/${taskId}`
+        }).then(response => {
+            console.log(response);
+            getList();
+        }).catch(error => {
+            alert('error deleting task', error);
+        });
+        }
+      })
+
 }

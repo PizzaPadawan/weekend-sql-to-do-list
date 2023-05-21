@@ -61,10 +61,11 @@ feature-time-completed:
 - Mark items as completed with corresponding `Complete` buttons
 - Delete items with corresponding `Delete` buttons
 
-`feature-styling-boostrap` is functionally the same as the `master` branch, just prettier!
-`feature-confirm-delete` adds an additional confirmation pop-up when the user clicks the delete button to prevent accidental deletions.
-`feature-ordering-task-query` keeps the order of the to-do list in descending order based on time added, even when marked as "completed"
-`feature-time-complted` adds a Time Completed column to the table that will display a timestamp of when each task was marked as "completed"
+Extra features:
+- `feature-styling-boostrap` is functionally the same as the `master` branch, just prettier!
+- `feature-confirm-delete` adds an additional confirmation pop-up when the user clicks the delete button to prevent accidental deletions.
+- `feature-ordering-task-query` keeps the order of the to-do list in descending order based on time added, even when marked as "completed"
+- `feature-time-complted` adds a Time Completed column to the table that will display a timestamp of when each task was marked as "completed"
 
 ## Built With
 - [node.js](https://nodejs.org/en)

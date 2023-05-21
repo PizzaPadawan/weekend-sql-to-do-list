@@ -24,7 +24,7 @@ Sweetalert confirmation pop-up added for validation on deleting tasks (feature-c
 ![feature-confirm-delete pop up (deletion confirmed) screenshot](/images/feature-confirm-delete2.png)
 
 
-Using req.query to order task last by id number (feature-ordering-task-query branch):
+Using req.query to order task list by id number (feature-ordering-task-query branch):
 
 ![feature-ordering-task-query screenshot](/images/feature-ordering-task-query.png)
 
@@ -47,7 +47,7 @@ feature-time-completed:
 ## Installation
 
 1. Create a database called "weekend-to-do-app"
-2. Run the query provided in weekend-to-do-app.sql
+2. Run the query provided in `weekend-to-do-app.sql`
 3. Open the project in your editor of choice and run `npm install`
 4. Install express with `npm i express`
 5. Install postgresql with `npm i pg`
@@ -86,7 +86,7 @@ Here's the TO-DO list for my TO-DO list! (whoa, meta!)
         - id SERIAL PRIMARY KEY
         - taskname VARCHAR(250) NOT NULL
         - completed BOOLEAN DEFAULT 'FALSE'
-        - time DATE
+        - time TIMESTAMP
     - [x] include .sql file for reference
 
 - [x] set up server-side code:

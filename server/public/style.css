@@ -6,6 +6,9 @@
 body {
     background: rgb(6,218,255);
 background: radial-gradient(circle, rgba(6,218,255,1) 0%, rgba(255,246,0,1) 66%, rgba(255,173,0,1) 100%);
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
 }
 
 body, input, button {

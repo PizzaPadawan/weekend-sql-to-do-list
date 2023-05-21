@@ -9,19 +9,28 @@ This project also has several feature branches, which have extra style changes a
 ## Screenshots
 
 Base mode / master branch:
+
 ![Master branch screenshot](/images/master.png)
 
-Bootstrap added for better styling: (feature-styling-bootstrap branch):
+
+Bootstrap added for better styling (feature-styling-bootstrap branch):
+
 ![feature-styling-bootstrap screenshot](/images/feature-styling-bootstrap.png)
 
+
 Sweetalert confirmation pop-up added for validation on deleting tasks (feature-confirm-delete branch):
+
 ![feature-confirm-delete pop-up (are you sure?) screenshot](/images/feature-confirm-delete1.png)
 ![feature-confirm-delete pop up (deletion confirmed) screenshot](/images/feature-confirm-delete2.png)
 
+
 Using req.query to order task last by id number (feature-ordering-task-query branch):
+
 ![feature-ordering-task-query screenshot](/images/feature-ordering-task-query.png)
 
+
 Time Completed column added to table, with moment.js used on both front and backend to format date and time (feature-time-completed branch):
+
 ![feature-time-completed screenshot](/images/feature-time-completed.png)
 
 ## Prerequisites

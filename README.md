@@ -108,6 +108,7 @@ Here's the TO-DO list for my TO-DO list! (whoa, meta!)
 - [x] npm i express
 
 - [x] front end that allows a user to create a task
+    - [x] html task input / button
     - [x] client.js ajax POST request
     - [x] client.js append function
 
@@ -115,6 +116,7 @@ Here's the TO-DO list for my TO-DO list! (whoa, meta!)
     - [x] todo.router.js POST request
 
 - [x] front end should refresh to show all tasks
+    - [x] html table
     - [x] client.js ajax GET request
     - [x] todo.router.js GET request
 
@@ -125,9 +127,8 @@ Here's the TO-DO list for my TO-DO list! (whoa, meta!)
     - [x] onReady click handlers
 
 - [x] change visual representation when task changed to complete
-    - [x] style.css .notcomplete class
     - [x] style.css .complete class
-    - [x] client.js addClass / removeClass
+    - [x] client.js conditional append
 
 - [x] 'completed' status should be stored in database
     - [x] todo.router.js PUT request

@@ -24,17 +24,17 @@ function appendList(response){
         console.log (item.completed);
     if(item.completed === true){
         $('#showList').append(`
-        <tr class="completed">
+        <tr class="table-success">
             <td>${item.taskname}</td>
-            <td><button data-id="${item.id}" class="completedButton">Complete</button></td>
-            <td><button data-id="${item.id}" class="deleteButton">Delete</button></td>
+            <td><button data-id="${item.id}" class="completedButton btn btn-outline-secondary">Complete</button></td>
+            <td><button data-id="${item.id}" class="deleteButton btn btn-danger">Delete</button></td>
         </tr>
         `);} else {
         $('#showList').append(`
         <tr>
             <td>${item.taskname}</td>
-            <td><button data-id="${item.id}" class="completedButton">Complete</button></td>
-            <td><button data-id="${item.id}" class="deleteButton">Delete</button></td>
+            <td><button data-id="${item.id}" class="completedButton btn btn-success">Complete</button></td>
+            <td><button data-id="${item.id}" class="deleteButton btn btn-danger">Delete</button></td>
         </tr>
         `);}
     }

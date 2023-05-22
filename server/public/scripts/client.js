@@ -8,7 +8,7 @@ $(()=>{
 function getList(){
     $.ajax({
         method: 'GET',
-        url: '/todo'
+        url: '/todo?sort=desc'
     }).then(response => {
         console.log("frontend GET success", response);
         appendList(response);
@@ -21,13 +21,13 @@ function getList(){
 function appendList(response){
     $('#showList').empty();
     for(item of response){
-        console.log (item.completed);
     if(item.completed === true){
         $('#showList').append(`
         <tr class="table-success">
             <td>${item.taskname}</td>
             <td><button data-id="${item.id}" class="completedButton btn btn-outline-secondary">Complete</button></td>
             <td><button data-id="${item.id}" class="deleteButton btn btn-danger">Delete</button></td>
+            <td>${moment(item.time).format('MMMM Do YYYY, h:mm:ss a')}</td>
         </tr>
         `);} else {
         $('#showList').append(`
@@ -35,6 +35,7 @@ function appendList(response){
             <td>${item.taskname}</td>
             <td><button data-id="${item.id}" class="completedButton btn btn-success">Complete</button></td>
             <td><button data-id="${item.id}" class="deleteButton btn btn-danger">Delete</button></td>
+            <td></td>
         </tr>
         `);}
     }
@@ -75,13 +76,31 @@ function pootis(event){
 function deleteTask(event){
     let taskId = $(event.target).data('id');
     console.log(taskId);
-    $.ajax({
-        method:'DELETE',
-        url: `/todo/${taskId}`
-    }).then(response => {
-        console.log(response);
-        getList();
-    }).catch(error => {
-        alert('error deleting task', error);
-    });
+    Swal.fire({
+        title: 'Are you sure you want to delete this?',
+        text: "This list item will be gone FOREVER (unless you submit it again, I guess)",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#198754',
+        cancelButtonColor: '#dc3545',
+        confirmButtonText: 'Yes pls'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          Swal.fire(
+            'Deleted!',
+            'This task has been removed from your list.',
+            'success'
+          )
+        $.ajax({
+            method:'DELETE',
+            url: `/todo/${taskId}`
+        }).then(response => {
+            console.log(response);
+            getList();
+        }).catch(error => {
+            alert('error deleting task', error);
+        });
+        }
+      })
+
 }

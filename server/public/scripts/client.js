@@ -50,6 +50,7 @@ function postTask(){
         }
     }).then(response => {
         console.log('POSTY');
+        getList();
     }).catch(error => {
         alert('error posting your task', error);
     });
